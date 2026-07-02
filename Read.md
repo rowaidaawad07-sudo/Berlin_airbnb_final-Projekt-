@@ -213,7 +213,7 @@ Rowaida and Blerina
 Erstellung der Datenbank-Codes (Tabellenentwurf, SQL-Schemata, Anbindung an PostgreSQL):
 Rowaida and Blerina
 
-Explorative Datenanalyse und statistische Auswertung (EDA, Korrelationsanalysen, ANOVA, Regressionsdiagnostik):
+Explorative Datenanalyse und statistische Auswertung EDA, Korrelationsanalysen ٌRowaida and Blerina, ANOVA, Regressionsdiagnostik:
 Rowaida
 
 Training der Machine-Learning-Modelle (Preprocessing, Modellvergleich, Hyperparameter-Optimierung, Speicherung des finalen Modells):
@@ -231,3 +231,9 @@ Rowaida
 
 Abschließende Weiterentwicklung und Gesamtkoordination des Projekts (Qualitätssicherung, Integration aller Module, Deployment-Vorbereitung):
 Rowaida
+
+Durchführung statistischer Analysen – diese wurden im endgültigen Projekt jedoch nicht weiterverwendet:
+Nagmah
+
+Erstellung einer PowerPoint-Präsentation (Zusammenfassung der ersten Version – wurde ebenfalls nicht für die finale Präsentation verwendet):
+Nagmah
