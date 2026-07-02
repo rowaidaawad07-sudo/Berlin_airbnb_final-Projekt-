@@ -63,6 +63,10 @@ Speichert das beste Modell (Random Forest) und die benötigten Metadaten (traini
 ml_functions.py ( unter src/ml)
 Enthält Hilfsfunktionen zur Extraktion von Features aus E‑Mail‑Texten (Regex + Ollama), zur Erstellung von KI‑Antworten und zur Preisvorhersage.
 
+create_inquiry_logs_table.py (unter src/ml)
+Erstellt die Tabelle inquiry_logs in der PostgreSQL‑Datenbank. Die Tabellenspalten werden automatisch aus den Schlüsseln der training_metadata.json generiert, sodass alle 79 Merkmale sowie die Spalte predicted_price aufgenommen werden. Dies stellt sicher, dass die extrahierten E‑Mail‑Daten strukturiert und vollständig gespeichert werden können.
+
+
 edit_training.py ( unter src/ml)
 Korrigiert Kodierungsfehler in der training_metadata.json (z. B. Umlaute).
 

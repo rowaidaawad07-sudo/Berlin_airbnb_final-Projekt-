@@ -14,8 +14,10 @@ if PROJECT_ROOT not in sys.path:
 # ==========================
 # 2.Modules can now be imported from src.
 # ==========================
+from src.config import DATABASE_URL
 from src.ml.ml_functions import extract_and_transform, get_ai_reply
 import src.ml.ml_functions as mf
+from src.config import DATABASE_URL 
 
 print("=" * 60)
 print("Using ml_functions from:")
@@ -32,13 +34,14 @@ import joblib
 import warnings
 warnings.filterwarnings("ignore")
 from email.message import EmailMessage
+ 
 
 # ==========================
 # CONFIG
 # ==========================
 DB_CONFIG = "dbname=Berlin_Airbnb user=postgres password=postgres host=localhost port=5432"
-EMAIL_USER = "E-mail@gmail.com"
-EMAIL_PASS = "App Password"   # Use Gmail App Password
+EMAIL_USER = "Email@gmail.com"
+EMAIL_PASS = "APP Passwors"   # Use Gmail App Password
 
 # ==========================
 # 3. Model Paths within src/ml
@@ -74,7 +77,7 @@ def get_email_text(msg):
 
 def save_to_db(full_data):
     try:
-        conn = psycopg2.connect(DB_CONFIG, client_encoding='UTF8')
+        conn = psycopg2.connect(DATABASE_URL, client_encoding='UTF8')
         cursor = conn.cursor()
         
         # Fetch the column names existing in the table 
