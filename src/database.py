@@ -1,0 +1,9 @@
+from sqlalchemy import create_engine
+from config import DATABASE_URL
+
+engine = create_engine(
+    DATABASE_URL,
+    connect_args={
+    "options": "-c client_encoding=LATIN1"
+}
+)

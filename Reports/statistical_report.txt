@@ -1,0 +1,163 @@
+=====================================
+STATISTICAL ANALYSIS REPORT
+=====================================
+
+PEARSON CORRELATION
+---------------------------------
+
+Accomodates
+Correlation = 0.6613
+P-value = 0.000000
+---------------------------------
+Bathrooms
+Correlation = 0.3890
+P-value = 0.000000
+---------------------------------
+Bedrooms
+Correlation = 0.6129
+P-value = 0.000000
+---------------------------------
+Beds
+Correlation = 0.5429
+P-value = 0.000000
+---------------------------------
+Guests Included
+Correlation = 0.5754
+P-value = 0.000000
+---------------------------------
+Min Nights
+Correlation = -0.0170
+P-value = 0.230339
+---------------------------------
+Reviews
+Correlation = 0.0251
+P-value = 0.076354
+---------------------------------
+Overall Rating
+Correlation = 0.0384
+P-value = 0.006552
+---------------------------------
+Accuracy Rating
+Correlation = 0.0063
+P-value = 0.658562
+---------------------------------
+Cleanliness Rating
+Correlation = 0.0913
+P-value = 0.000000
+---------------------------------
+Checkin Rating
+Correlation = -0.0136
+P-value = 0.337777
+---------------------------------
+Communication Rating
+Correlation = -0.0028
+P-value = 0.842065
+---------------------------------
+Location Rating
+Correlation = 0.0837
+P-value = 0.000000
+---------------------------------
+Value Rating
+Correlation = -0.1315
+P-value = 0.000000
+---------------------------------
+
+
+ANOVA TESTS
+---------------------------------
+
+
+Room Type
+                         sum_sq      df          F         PR(>F)
+C(Q("Room Type"))  3.580718e+06     2.0  811.92794  4.777382e-306
+Residual           1.101654e+07  4996.0        NaN            NaN
+---------------------------------
+
+Property Type
+                             sum_sq      df         F        PR(>F)
+C(Q("Property Type"))  5.811622e+05    20.0  10.32037  3.429493e-32
+Residual               1.401609e+07  4978.0       NaN           NaN
+---------------------------------
+
+Is Superhost
+                            sum_sq      df          F        PR(>F)
+C(Q("Is Superhost"))  7.596848e+04     1.0  26.141934  3.290587e-07
+Residual              1.452129e+07  4997.0        NaN           NaN
+---------------------------------
+
+Instant Bookable
+                                sum_sq      df          F        PR(>F)
+C(Q("Instant Bookable"))  7.136009e+04     1.0  24.548323  7.486061e-07
+Residual                  1.452589e+07  4997.0        NaN           NaN
+---------------------------------
+
+Neighborhood Group
+                                  sum_sq      df          F        PR(>F)
+C(Q("Neighborhood Group"))  4.092747e+05    11.0  13.077991  6.533529e-25
+Residual                    1.418798e+07  4987.0        NaN           NaN
+---------------------------------
+
+
+MULTIPLE LINEAR REGRESSION (OLS)
+---------------------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                  Price   R-squared:                       0.562
+Model:                            OLS   Adj. R-squared:                  0.561
+Method:                 Least Squares   F-statistic:                     456.8
+Date:                Mon, 29 Jun 2026   Prob (F-statistic):               0.00
+Time:                        19:53:18   Log-Likelihood:                -24974.
+No. Observations:                4999   AIC:                         4.998e+04
+Df Residuals:                    4984   BIC:                         5.008e+04
+Df Model:                          14                                         
+Covariance Type:            nonrobust                                         
+========================================================================================
+                           coef    std err          t      P>|t|      [0.025      0.975]
+----------------------------------------------------------------------------------------
+const                 -131.9191     14.129     -9.337      0.000    -159.618    -104.221
+Accomodates             10.9775      0.572     19.178      0.000       9.855      12.100
+Bathrooms               20.2709      1.633     12.415      0.000      17.070      23.472
+Bedrooms                17.7412      1.042     17.031      0.000      15.699      19.783
+Beds                    -3.6809      0.629     -5.852      0.000      -4.914      -2.448
+Guests Included         10.3290      0.663     15.571      0.000       9.029      11.629
+Min Nights              -0.0307      0.034     -0.890      0.373      -0.098       0.037
+Reviews                 -0.0056      0.005     -1.061      0.289      -0.016       0.005
+Overall Rating           0.9520      0.204      4.668      0.000       0.552       1.352
+Accuracy Rating         -1.2220      1.526     -0.801      0.423      -4.214       1.770
+Cleanliness Rating       8.0976      0.998      8.113      0.000       6.141      10.054
+Checkin Rating          -4.5501      1.557     -2.923      0.003      -7.602      -1.498
+Communication Rating    -1.4849      1.592     -0.933      0.351      -4.607       1.637
+Location Rating         15.4533      1.026     15.059      0.000      13.442      17.465
+Value Rating           -13.9220      1.177    -11.828      0.000     -16.230     -11.615
+==============================================================================
+Omnibus:                     4917.624   Durbin-Watson:                   1.988
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):          1011404.765
+Skew:                           4.261   Prob(JB):                         0.00
+Kurtosis:                      72.160   Cond. No.                     4.54e+03
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 4.54e+03. This might indicate that there are
+strong multicollinearity or other numerical problems.
+
+VARIANCE INFLATION FACTOR (VIF)
+---------------------------------
+
+            Variable         VIF
+      Overall Rating 1437.137010
+Communication Rating  914.541748
+      Checkin Rating  860.749773
+     Accuracy Rating  854.556809
+        Value Rating  479.633385
+  Cleanliness Rating  351.309633
+     Location Rating  330.223757
+         Accomodates   17.276443
+           Bathrooms   13.707253
+                Beds    9.299069
+            Bedrooms    8.513369
+     Guests Included    6.116025
+             Reviews    2.236451
+          Min Nights    1.135523
+

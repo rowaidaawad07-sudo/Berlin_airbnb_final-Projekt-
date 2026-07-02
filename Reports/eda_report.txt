@@ -1,0 +1,129 @@
+=====================================
+BERLIN AIRBNB - EDA REPORT
+=====================================
+
+DATASET INFORMATION
+-----------------------------
+Rows: 4999
+Columns: 46
+
+COLUMN NAMES
+-----------------------------
+index
+Review ID
+review_date
+Reviewer ID
+Reviewer Name
+Comments
+Listing ID
+Listing URL
+Listing Name
+Host ID
+Host URL
+Host Name
+Host Since
+Host Response Time
+Host Response Rate
+Is Superhost
+neighbourhood
+Neighborhood Group
+City
+Postal Code
+Country Code
+Country
+Latitude
+Longitude
+Is Exact Location
+Property Type
+Room Type
+Accomodates
+Bathrooms
+Bedrooms
+Beds
+Price
+Guests Included
+Min Nights
+Reviews
+First Review
+Last Review
+Overall Rating
+Accuracy Rating
+Cleanliness Rating
+Checkin Rating
+Communication Rating
+Location Rating
+Value Rating
+Instant Bookable
+Business Travel Ready
+
+MISSING VALUES
+-----------------------------
+Review ID        57
+review_date      57
+Reviewer ID      57
+Reviewer Name    57
+Host Since        1
+First Review     57
+Last Review      57
+dtype: int64
+
+DESCRIPTIVE STATISTICS
+-----------------------------
+             Price  Accomodates    Bathrooms     Bedrooms         Beds      Reviews   Min Nights
+count  4999.000000  4999.000000  4999.000000  4999.000000  4999.000000  4999.000000  4999.000000
+mean     68.352270     3.111422     1.097520     1.227846     1.911182   103.267253     5.086017
+std      54.042753     1.971432     0.341157     0.713092     1.543718    98.683437    14.825469
+min      10.000000     1.000000     0.000000     0.000000     0.000000     0.000000     1.000000
+25%      37.000000     2.000000     1.000000     1.000000     1.000000    27.000000     1.000000
+50%      53.000000     2.000000     1.000000     1.000000     1.000000    75.000000     2.000000
+75%      80.000000     4.000000     1.000000     1.000000     2.000000   150.000000     3.000000
+max     888.000000    16.000000     8.000000     8.000000    16.000000   545.000000   240.000000
+
+CORRELATION WITH PRICE
+-----------------------------
+Price          1.000000
+Accomodates    0.661326
+Bedrooms       0.612926
+Beds           0.542931
+Bathrooms      0.389049
+Reviews        0.025068
+Min Nights    -0.016968
+Name: Price, dtype: float64
+
+TOP NEIGHBORHOODS
+-----------------------------
+Neighborhood Group
+Mitte                       1286
+Friedrichshain-Kreuzberg    1202
+Pankow                       879
+NeukÃ¶lln                    548
+Charlottenburg-Wilm.         357
+Tempelhof - SchÃ¶neberg      307
+Lichtenberg                  145
+Treptow - KÃ¶penick          105
+Steglitz - Zehlendorf         69
+Reinickendorf                 56
+Name: count, dtype: int64
+
+ROOM TYPES
+-----------------------------
+Room Type
+Entire home/apt    2635
+Private room       2299
+Shared room          65
+Name: count, dtype: int64
+
+PROPERTY TYPES
+-----------------------------
+Property Type
+Apartment             4319
+Loft                   179
+Condominium            135
+House                   75
+Serviced apartment      65
+Hostel                  48
+Guest suite             39
+Townhouse               29
+Bed and breakfast       29
+Guesthouse              26
+Name: count, dtype: int64
